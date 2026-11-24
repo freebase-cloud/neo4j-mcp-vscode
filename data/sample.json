@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "person": "Ada",
+    "reports": 5
+  },
+  {
+    "id": 2,
+    "person": "Bo",
+    "reports": 0
+  },
+  {
+    "id": 3,
+    "person": "Cy",
+    "reports": 3
+  }
+]

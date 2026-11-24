@@ -1,0 +1,6 @@
+{
+  "name": "neo4j-mcp-vscode",
+  "engine": "neo4j",
+  "slug": "neo4j",
+  "kind": "mcp"
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "phase": "seed",
+    "query": "CREATE (n:fbx_neo4j_000000000000000000000000 {id: 1, person: 'Ada', reports: 5}) RETURN n"
+  },
+  {
+    "phase": "seed",
+    "query": "CREATE (n:fbx_neo4j_000000000000000000000000 {id: 2, person: 'Bo', reports: 0}) RETURN n"
+  },
+  {
+    "phase": "seed",
+    "query": "CREATE (n:fbx_neo4j_000000000000000000000000 {id: 3, person: 'Cy', reports: 3}) RETURN n"
+  },
+  {
+    "phase": "read",
+    "query": "MATCH (n:fbx_neo4j_000000000000000000000000) RETURN n LIMIT 100"
+  },
+  {
+    "phase": "update",
+    "query": "MATCH (n:fbx_neo4j_000000000000000000000000 {id: 1}) SET n.reports = 15 RETURN n"
+  },
+  {
+    "phase": "verify",
+    "query": "MATCH (n:fbx_neo4j_000000000000000000000000 {id: 1}) RETURN n LIMIT 100"
+  },
+  {
+    "phase": "delete",
+    "query": "MATCH (n:fbx_neo4j_000000000000000000000000 {id: 2}) DELETE n"
+  },
+  {
+    "phase": "cleanup",
+    "operation": "DROP_TABLE",
+    "table": "fbx_neo4j_000000000000000000000000"
+  }
+]
